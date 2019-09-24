@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Criando Banco de Dados</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
 <?php
 
 $servidor = "localhost";
@@ -21,7 +31,7 @@ if (mysqli_num_rows($resultado) > 0) {
     while($linha = mysqli_fetch_assoc($resultado)) {
 		echo "<tr><td> id: " . $linha["id"]. " </td><td>Nome: " . 
 		$linha["nome"]. "</td><td> Descrição: " . $linha["descricao"]. " </td><td>Valor: " . 
-		$linha["valor"]. "</td></tr><br>";
+		$linha["valor"]. "</td></tr>";
 	}
 	echo "</table>";
 } else {
@@ -31,3 +41,12 @@ if (mysqli_num_rows($resultado) > 0) {
 mysqli_close($conexao);
 
 ?>
+
+<div class="botaoVoltar">
+    <form action="index.html">
+        <button type="submit" class="btn btn-info">Voltar</button>
+    </form>
+</div>
+
+</body>
+</html>

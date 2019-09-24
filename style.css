@@ -6,7 +6,7 @@
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    background-color: rgb(207, 202, 202);
+    background-color: rgb(186, 217, 224);
     padding: 10px;
   }
 
@@ -26,11 +26,23 @@ input[type=text], input[type=number]:focus {
 .formulario{
     padding: 10px;
     font-size: 15px;
+    background-color: rgb(186, 217, 224);
 }
 
-.botaoEnviar, .botaoPesquisarBanco{
+.botaoEnviar, .botaoPesquisarBanco, .botaoVoltar{
     padding: 5px;
     /* align-content:  */
+}
+
+.footer{
+    background-color: gray;
+    padding: 100px;
+    border: 15px;
+    text-align: center;
+    font-family: sans-serif;
+    border-style: solid;
+    border-color: white;
+    border-width: 5px;
 }
 
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Criando Conexão BD</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -29,12 +29,11 @@ echo "Conexão realizada com sucesso!";
 mysqli_close($conexao);
 ?>
 
-<div class="bancoDados">
-        <form action="index.html">
-            <input type="submit" value="Voltar">
-        </form>
-    </div>
-
+<div class="botaoVoltar">
+    <form action="index.html">
+        <button type="submit" class="btn btn-info">Voltar</button>
+    </form>
+</div>
 
 </body>
 </html>
