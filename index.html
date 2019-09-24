@@ -16,11 +16,14 @@
         </form>
     </div>
     <!-- Criando o banco de dados -->
-    <div class="button">
         <form action="criarBancoDados.php">
             <button type="submit" class="btn btn-info">2 - Criar Banco de Dados</button>
         </form>
-    </div>
+    <!-- Criando as tabelas (Estas tabelas já estarão definidas no arquivo "criarTabelas.php, aqui sera somente o botão para concluir a ação direto no banco") -->
+    <form action="criarTabelas.php">
+        <button type="submit" class="btn btn-info">3 - Criar Tabelas</button>
+    </form>
+
 
     <form action="recebe.php">
         Nome: <input type="text" name="nome">
