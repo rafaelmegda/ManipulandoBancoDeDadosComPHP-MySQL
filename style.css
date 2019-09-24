@@ -3,6 +3,35 @@
     padding: 10px 10px 10px 10px;
 }
 
-.formulario{
-    padding: 25px 50px 75px 100px;
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: rgb(207, 202, 202);
+    padding: 10px;
+  }
+
+.grid-item {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
 }
+
+input[type=text], input[type=number]:focus {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.formulario{
+    padding: 10px;
+    font-size: 15px;
+}
+
+.botaoEnviar, .botaoPesquisarBanco{
+    padding: 5px;
+    /* align-content:  */
+}
+
+
+

@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Criando Banco de Dados</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+
 <?php
 $nomeDigitado = $_GET['nome'];
 $descricaoDigitado = $_GET['descricao'];
@@ -23,3 +33,12 @@ $conexao = mysqli_connect($servidor, $usuario, $senha, $banco);
  
  mysqli_close($conexao);
  ?>
+	<!-- Buscar os produtos cadastrados no banco --> 
+<div class="botaoPesquisarBanco">
+   	<form action="selectBanco.php">
+		<button type="submit" class="btn btn-info">Buscar Todos os Produtos no Banco</button>
+	</form> 
+</div>
+	
+	</body>
+</html>
