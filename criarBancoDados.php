@@ -16,27 +16,24 @@ $senha = "";
 // Cria a conexão:
 $conexao = mysqli_connect($servidor, $usuario, $senha);
 
-// Verifica a conexão
-if( $conexao == false ) {
-   die("A conexão falhou: " . mysqli_connect_error());
-}
-
-echo "Conexão realizada com sucesso!<br>";
-
 // Cria o banco de dados
 $sql = "CREATE DATABASE bdTeste";
 if (mysqli_query($conexao, $sql)) {
-    echo "Banco de dados criado com sucesso!<br>";
+    
+    echo " <p> Banco de dados criado com sucesso! </p>";
+// Fazer condição que retorna mensagem quando o banco já estiver
 } else {
-    echo "Erro na criação do banco de dados: " . mysqli_error($conexao);
+    echo "Erro na criação do banco de dados: " .  mysqli_error($conexao);
 }
+
 
 mysqli_close($conexao);
 ?>
 <div class="botaoVoltar">
     <form action="index.html">
         <button type="submit" class="btn btn-info">Voltar</button>
-    </form>
+    </form>    
 </div>
+
 </body>
 </html>
