@@ -17,13 +17,6 @@ $banco = "bdTeste"; // inserir aqui qual o banco deseja criar as tabelas
 // Cria a conexão:
 $conexao = mysqli_connect($servidor, $usuario, $senha, $banco);
 
-// Verifica a conexão
-if( $conexao == false ) {
-   die("A conexão falhou: " . mysqli_connect_error());
-}
-
-echo "Conexão realizada com sucesso!<br>";
-
 // Cria a tabela
 $sql = "CREATE TABLE itens (
    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,

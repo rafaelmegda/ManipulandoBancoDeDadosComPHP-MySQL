@@ -27,7 +27,13 @@ $conexao = mysqli_connect($servidor, $usuario, $senha, $banco);
  
  if (mysqli_query($conexao, $sql)) {
 	 echo "Registro criado com sucesso!<br>";
- } else {
+ }elseif(empty ($nomeDigitado)){
+	echo "Favor preencher o campo nome!";
+} elseif(empty ($descricaoDigitado)){
+	echo "Favor preencher o campo descrição!";
+}elseif(empty ($valorDigitado)){
+	echo "Favor preencher o campo valor!";	
+}else {
 	 echo "Erro na criação do registro: " . mysqli_error($conexao);
  }
  
@@ -38,6 +44,12 @@ $conexao = mysqli_connect($servidor, $usuario, $senha, $banco);
    	<form action="selectBanco.php">
 		<button type="submit" class="btn btn-info">Buscar Todos os Produtos no Banco</button>
 	</form> 
+</div>
+
+<div class="botaoVoltar">
+    <form action="index.html">
+        <button type="submit" class="btn btn-info">Voltar</button>
+    </form>    
 </div>
 	
 	</body>
