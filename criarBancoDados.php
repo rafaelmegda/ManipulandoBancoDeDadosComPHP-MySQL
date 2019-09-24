@@ -2,16 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Criando Conexão BD</title>
+    <title>Criando Banco de Dados</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 <body>
-
 <?php
 
-/*Colocar aqui as informações para conectar aos seus servidores, caso esteja utilizando o Wampserver
-coloque o endereço de conexão, seu usuário e a senha, caso não tenha senha deixe em "branco" com "" ; */
 $servidor = "localhost";
 $usuario = "root";
 $senha = "";
@@ -24,17 +21,18 @@ if( $conexao == false ) {
    die("A conexão falhou: " . mysqli_connect_error());
 }
 
-echo "Conexão realizada com sucesso!";
+echo "Conexão realizada com sucesso!<br>";
+
+// Cria o banco de dados
+$sql = "CREATE DATABASE bdTeste";
+if (mysqli_query($conexao, $sql)) {
+    echo "Banco de dados criado com sucesso!<br>";
+} else {
+    echo "Erro na criação do banco de dados: " . mysqli_error($conexao);
+}
 
 mysqli_close($conexao);
 ?>
-
-<div class="bancoDados">
-        <form action="index.html">
-            <input type="submit" value="Voltar">
-        </form>
-    </div>
-
 
 </body>
 </html>

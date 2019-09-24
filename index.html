@@ -3,22 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Banco de Dados MySQL</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
+
+<div class="formulario">
+    <!-- Criando a conexao com o banco de dados -->
+    <div class="button">
+        <form action="criarConexao.php">
+            <button type="submit" class="btn btn-info">1 - Criar Conexão com BD</button>
+        </form>
+    </div>
+    <!-- Criando o banco de dados -->
+    <div class="button">
+        <form action="criarBancoDados.php">
+            <button type="submit" class="btn btn-info">2 - Criar Banco de Dados</button>
+        </form>
+    </div>
 
     <form action="recebe.php">
         Nome: <input type="text" name="nome">
         Telefone: <input type="text" name="telefone">
         Saldo: <input type="number" name="saldo">
-        <input type="submit" value="Enviar">
-    </form>
-    
-    <div class="bancoDados">
-            <form action="criarConexao.php">
-                <input type="submit" value="Criar Conexão BD">
-            </form>
-        </div>
-
+        <input type="submit" value="Enviar">            
+    </form>      
+</div>
 
 </body>
 </html>
