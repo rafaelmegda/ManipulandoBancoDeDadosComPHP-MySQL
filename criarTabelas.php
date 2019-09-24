@@ -25,10 +25,11 @@ if( $conexao == false ) {
 echo "Conexão realizada com sucesso!<br>";
 
 // Cria a tabela
-$sql = "CREATE TABLE alunos (
+$sql = "CREATE TABLE itens (
    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
    nome VARCHAR(40) NOT NULL,
-   nota VARCHAR(5)
+   descricao VARCHAR(40) NOT NULL,
+   valor DECIMAL(10,2)
 )";
 
 if (mysqli_query($conexao, $sql)) {

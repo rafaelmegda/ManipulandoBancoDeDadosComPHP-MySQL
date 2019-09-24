@@ -23,14 +23,20 @@
     <form action="criarTabelas.php">
         <button type="submit" class="btn btn-info">3 - Criar Tabelas</button>
     </form>
-
-
-    <form action="recebe.php">
+    
+    
+    <!--Cadastrar os produtos no Banco -->
+    <form action="recebe.php" method="GET">
         Nome: <input type="text" name="nome">
-        Telefone: <input type="text" name="telefone">
-        Saldo: <input type="number" name="saldo">
-        <input type="submit" value="Enviar">            
+        Descrição: <input type="text" name="descricao">
+        Valor: <input type="number" name="valor">
+        <button type="submit" class="btn btn-warning">Cadastrar Produto</button>      
     </form>      
+
+    <!-- Buscar os produtos cadastrados no banco -->    
+    <form action="selectBanco.php">
+        <button type="submit" class="btn btn-info">Buscar Todos os Produtos no Banco</button>
+    </form>   
 </div>
 
 </body>
