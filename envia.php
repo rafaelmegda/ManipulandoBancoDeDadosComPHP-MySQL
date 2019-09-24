@@ -5,7 +5,7 @@
     <title>Formulário</title>
 </head>
 <body>
-    <form action="index.php">
+    <form action="recebe.php">
         Nome: <input type="text" name="nome">
         Telefone: <input type="text" name="telefone">
         Saldo: <input type="number" name="saldo">
